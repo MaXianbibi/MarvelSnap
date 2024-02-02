@@ -1,0 +1,20 @@
+.button-header-container {
+    height: 100%;
+    width: 100%;
+    background-color: #1e204d;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Protest Guerrilla', sans-serif;
+    font-size: 2vw;
+    
+    transition: background-color .25s;
+
+}
+
+.button-header-container:hover {
+    transition: background-color .5s;
+    background-color: #3e40a3;
+}
