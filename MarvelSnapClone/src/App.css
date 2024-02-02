@@ -7,6 +7,16 @@
 }
 
 
+html, body {
+    overflow-y: scroll; /* Permet le défilement */
+    scrollbar-width: none; /* Pour les navigateurs qui supportent cette propriété (Firefox) */
+  }
+  
+  /* Pour les navigateurs WebKit comme Chrome, Safari */
+  body::-webkit-scrollbar {
+    display: none; /* Cache la barre de défilement */
+  }
+
 .app-style {
     height: 100vh;
     width: 100vw;
