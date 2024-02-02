@@ -20,22 +20,22 @@ function Cards({ name, description, image, power, energy, rarity }: CardProps) {
     backgroundPosition: 'center',
 
   };
-  console.log(cardStyle)
-
   return (
-    <div className='cards-container' style={cardStyle}>
-      <div className='stats-container'>
-        <div className='bubble-stats'>
-          <p>{energy}</p>
+    <button>
+      <div className='cards-container' style={cardStyle}>
+        <div className='stats-container'>
+          <div className='bubble-stats'>
+            <p>{energy}</p>
+          </div>
+          <div className='bubble-stats'>
+            <p>{power}</p>
+          </div>
         </div>
-        <div className='bubble-stats'>
-          <p>{power}</p>
+        <div className='name-container'>
+          <p>{name}</p>
         </div>
       </div>
-      <div className='name-container'>
-        <p>{name}</p>
-      </div>
-    </div>
+    </button>
   )
 }
 

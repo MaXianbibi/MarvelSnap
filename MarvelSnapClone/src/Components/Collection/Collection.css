@@ -1,6 +1,6 @@
 .collection-container { 
 
-    height: fit-content;
+    height: 100%;
     width: 100%;
     background-color: #0a0b19;
 
@@ -8,9 +8,12 @@
     justify-content: center;
     padding-top: 8%;
     padding-right: 5%;
+    
     flex-wrap: wrap;
 
     gap: 20px;
+
+
 }
 
 .current-deck-container {
@@ -26,10 +29,32 @@
 
 .card-in-collection-container {
     width: 60%;
-    height: 70%;
+    height: 100%;
     display: flex;
-
+    padding-bottom: 5%;
     gap: 30px;
     flex-wrap: wrap;
+    overflow: scroll;
 
+}
+
+.card-in-collection-container::-webkit-scrollbar {
+    display: none;
+}
+
+
+.cards-in-deck-container {
+    height: 26%;
+    width: 22%;
+
+
+    border: 1px solid white;
+    border-radius: 5px;
+
+}
+
+
+.current-deck-container {
+    display: flex;
+    flex-wrap: wrap;
 }
