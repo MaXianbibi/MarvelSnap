@@ -10,7 +10,7 @@
     filter: blur(0px);
 
     align-items: center;
-
+    
 
     color: white;
 }
@@ -28,5 +28,11 @@
     display: flex;
     justify-content: space-around;
     width: 100%;
+}
 
+.visuel-card-container-on-focus {
+    width: 178px;
+    height: 280px;
+
+    font-size: 7rem;
 }

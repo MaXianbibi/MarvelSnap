@@ -5,6 +5,11 @@
     transition: 0.2s;
 
     height: fit-content;
+
+    height: 280px;
+    width: 180px;
+
+    font-size: 6.25rem;
     
 }
 
