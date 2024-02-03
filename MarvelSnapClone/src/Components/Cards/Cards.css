@@ -1,57 +1,14 @@
-.cards-container { 
-    min-width: 10%;
-    min-height: 25%;
+.button-cards-container {
 
-    height: 300px;
-    width: 150px;
-    background-image: url('CaptainAmericaHughes.jpg');
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    font-size: 50px;
-
-     
-    font-family: 'Bangers', system-ui;
-    color: white;
-    text-shadow: 10px 4px 12px #000000;
-
-    align-items: center;
-
-    border-radius: 5px;
-
+    
     transform: scale(1);
     transition: 0.2s;
 
+    height: fit-content;
     
 }
 
-.stats-container {
-    width: 110%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    /* justify-content: center; */
-    /* gap: 50px; */
-    font-size: 50px;
-}
-
-.name-container {
-    font-size: 30px;
-    display: flex;
-    width: 100%;
-    text-align: center;
-}
-
-.bubble-stats {
-    background-color: red;
-    width: 30%;
-    border-radius: 30px;
-    display: flex;
-    justify-content: center;
-}
-
-.cards-container:hover {
+.button-cards-container:hover {
     transform: scale(1.1);
     transition: 0.2s;
     cursor: pointer;

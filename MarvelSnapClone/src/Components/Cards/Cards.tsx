@@ -1,42 +1,34 @@
 import React from 'react'
 import './Cards.css'
-import { Background } from '@tsparticles/engine'
-
+import { useState } from 'react'
+import CardsVisual from './CardsVisual/CardsVisual'
 interface CardProps {
-  name: string
-  description: string
-  image: string
-  power: number
-  energy: number
-  rarity: number
-
+	name: string
+	description: string
+	image: string
+	power: number
+	energy: number
+	rarity: number
+	clickHandler?: (CardInfo: CardProps ) => void
 }
 
+const Cards: React.FC<CardProps> = (CardInfo) =>
+{
+	const { name, description, image, power, energy, rarity, clickHandler } = CardInfo
 
-function Cards({ name, description, image, power, energy, rarity }: CardProps) {
-  const cardStyle = {
-    backgroundImage: `${image}`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
 
-  };
-  return (
-    <button>
-      <div className='cards-container' style={cardStyle}>
-        <div className='stats-container'>
-          <div className='bubble-stats'>
-            <p>{energy}</p>
-          </div>
-          <div className='bubble-stats'>
-            <p>{power}</p>
-          </div>
-        </div>
-        <div className='name-container'>
-          <p>{name}</p>
-        </div>
-      </div>
-    </button>
-  )
+
+	function detailCards() {
+		clickHandler && clickHandler(CardInfo)
+	}
+// {image, energy, power, name}
+	return (
+		<>
+			<button onClick={detailCards} className='button-cards-container'>
+				<CardsVisual {...CardInfo}/> 
+			</button>
+		</>
+	)
 }
 
 export default Cards

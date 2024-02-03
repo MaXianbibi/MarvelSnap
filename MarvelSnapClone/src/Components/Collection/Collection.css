@@ -13,6 +13,8 @@
 
     gap: 20px;
 
+    transition: filter 0.2s; 
+
 
 }
 
@@ -57,4 +59,13 @@
 .current-deck-container {
     display: flex;
     flex-wrap: wrap;
+}
+
+
+.cards-on-focus-container {
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    z-index: 100;
+    top: 5%;
 }
