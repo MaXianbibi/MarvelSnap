@@ -1,0 +1,68 @@
+.playboard-container {
+    background-color: #0a0b19;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction:column-reverse;
+
+    align-items: center;
+}
+
+.playboard-deck-container {
+    height: 20%;
+    width: 50%;
+    /* background-color: blueviolet; */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2%;
+    gap: 10px;
+}
+
+.playboard-card-in-hand {
+    height: 100%;
+    flex:1;
+    border: 2px solid silver;
+    /* border-ou */
+    max-width: 80px;
+    font-size: 80px;
+}
+
+
+
+.playboard-in-ally-container {
+    display: flex;
+	width: 70%;
+	background-color: blueviolet;
+	height: 30%;
+}
+
+.playboard-in-play-ally-container {
+	flex: 1;
+	border: 1px solid black;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.playerboard-in-play-ally-cards-container {
+	flex: 1;
+	border: 1px solid black;
+	min-width: 50%;
+}
+
+.playboard-retour-button {
+	position: absolute;
+	bottom: 5%;
+	right: 5%;
+}
+
+.playboard-city-container {
+	display: flex;
+	width: 70%;
+	background-color: blueviolet;
+	height: 20%;
+}
+
+.playboard-city-single-container {
+	flex: 1;
+	border: 1px solid black;
+}

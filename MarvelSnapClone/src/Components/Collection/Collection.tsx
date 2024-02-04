@@ -61,14 +61,11 @@ function Collection() {
 
 			<div className='collection-container' style={styleCollectionContainer} onMouseUp={handleMouseUp}>
 				<div className="current-deck-container">
-					{/* Rendu des éléments CardsVisual */}
 					{deckContext.deck.map((card, index) => (
 						<div key={index} className="cards-in-deck-container">
 							<CardsVisual {...card} />
 						</div>
 					))}
-
-					{/* Rendu des divs vides pour compléter jusqu'à 16 */}
 					{[...Array(Math.max(0, 16 - deckContext.deck.length))].map((_, index) => (
 						<div key={`empty-${index}`} className="cards-in-deck-container"></div>
 					))}
@@ -97,9 +94,6 @@ function Collection() {
 					<Cards {...cardsInfo} />
 					<Cards {...cardsInfo} />
 				</div>
-
-
-
 			</div>
 		</>
 	)
