@@ -9,6 +9,7 @@ interface CardProps {
 	power: number
 	energy: number
 	rarity: number
+	id: number
 	clickHandler?: (CardInfo: CardProps ) => void
 }
 

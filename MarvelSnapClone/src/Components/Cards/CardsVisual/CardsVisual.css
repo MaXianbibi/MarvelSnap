@@ -1,7 +1,6 @@
 .cards-container { 
     height: 100%;
     width: 100%;
-    /* background-image: url('./CaptainAmericaHughes.jpg'); */
     display: flex;
     flex-direction: column;
     justify-content: space-between;

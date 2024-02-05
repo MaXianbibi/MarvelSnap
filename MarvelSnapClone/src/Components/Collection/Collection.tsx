@@ -15,6 +15,7 @@ interface CardProps {
 	power: number
 	energy: number
 	rarity: number
+	id: number
 
 	clickHandler?: (CardInfo: CardProps) => void
 
@@ -22,10 +23,14 @@ interface CardProps {
 
 function Collection() {
 	const [isFocus, setIsFocused] = React.useState(false)
+
+	const [cardOnFocus, setCardOnFocus] = React.useState<CardProps | null>(null)
+
 	const deckContext = useDeckContext()
 
 	function onClickHodler(CardInfo: CardProps) {
 		setIsFocused(!isFocus)
+		setCardOnFocus(CardInfo)
 	}
 
 	const cardsInfo: CardProps = {
@@ -36,12 +41,23 @@ function Collection() {
 		energy: 2,
 		rarity: 0,
 		clickHandler: onClickHodler,
+		id: 0,
+	}
+	const cardsThor: CardProps = {
+		name: 'Thor',
+		description: '"Au Combat !"',
+		image: 'Thor.jpg',
+		power: 10,
+		energy: 6,
+		rarity: 0,
+		clickHandler: onClickHodler,
+		id: 0,
 	}
 
 	const styleCollectionContainer: React.CSSProperties = {
 		filter: `${isFocus ? 'blur(3px) brightness(50%)' : 'none'}`,
-	  };
-	  
+	};
+
 
 	const styleCardsOnFocus: React.CSSProperties = {
 		display: isFocus ? 'block' : 'none',
@@ -54,10 +70,11 @@ function Collection() {
 	return (
 		<>
 			<div style={styleCardsOnFocus} className='cards-on-focus-container' >
-				<CardsOnFocus>
-					<CardsVisual {...cardsInfo} />
-				</CardsOnFocus>
+				{cardOnFocus && <CardsOnFocus>
+					<CardsVisual {...cardOnFocus} />
+				</CardsOnFocus>}
 			</div>
+
 
 			<div className='collection-container' style={styleCollectionContainer} onMouseUp={handleMouseUp}>
 				<div className="current-deck-container">
@@ -72,7 +89,7 @@ function Collection() {
 				</div>
 
 				<div className="card-in-collection-container">
-					<Cards {...cardsInfo} />
+					<Cards {...cardsThor} />
 					<Cards {...cardsInfo} />
 					<Cards {...cardsInfo} />
 					<Cards {...cardsInfo} />

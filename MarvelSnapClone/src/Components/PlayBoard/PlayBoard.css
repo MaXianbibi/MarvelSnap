@@ -1,3 +1,7 @@
+* {
+    transition: all 0.3s;
+}
+
 .playboard-container {
     background-color: #0a0b19;
     width: 100vw;
@@ -27,7 +31,9 @@
     font-size: 80px;
 }
 
-
+.playboard-card-in-hand:hover {
+    transform: scale(1.1);
+}
 
 .playboard-in-ally-container {
     display: flex;
@@ -47,7 +53,21 @@
 	flex: 1;
 	border: 1px solid black;
 	min-width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+
 }
+
+.playerboard-in-play-ally-cards-container > div {
+
+    
+    font-size: 60px;
+    width: 50%;
+    border: 1px solid silver;
+}
+
+
 
 .playboard-retour-button {
 	position: absolute;
@@ -66,3 +86,17 @@
 	flex: 1;
 	border: 1px solid black;
 }
+
+.playboard-next-turn-button {
+    position: absolute;
+    width: auto;
+    left: 8%;
+    bottom: 23.2%;
+    background-color: blueviolet;
+    color: white;
+    width: 100px;
+    height: 50px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 10px;
+}
+

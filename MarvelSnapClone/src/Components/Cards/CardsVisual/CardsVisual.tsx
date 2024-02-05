@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import imageSrc from './CaptainAmericaHughes.jpg'
+// import imageSrc from './CaptainAmericaHughes.jpg'
 
 
 import './CardsVisual.css';
@@ -11,6 +11,7 @@ interface CardProps {
 	power: number
 	energy: number
 	rarity: number
+	id: number
 
 	clickHandler?: (CardInfo: CardProps) => void
 }
@@ -19,9 +20,8 @@ interface CardProps {
 function CardsVisual(CardInfo: CardProps) {
 
 	const { name, description, image, power, energy, rarity, clickHandler } = CardInfo
-
 	const cardStyle = {
-		backgroundImage: `url(${imageSrc})`,
+		backgroundImage: `url(${image})`,
 		backgroundSize: 'cover',
 		backgroundPosition: 'center',
 	};
