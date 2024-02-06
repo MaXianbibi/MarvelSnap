@@ -29,10 +29,7 @@ function PlayBoard() {
 	const [isCardInHand, setisCardInHand] = React.useState(false)
 	const [allies, setAllies] = React.useState<CardProps[][]>([[], [], []]);
 	const [cardInHand, setCardInHand] = React.useState<CardInHandProps | null>(null);
-
-
 	const [tempDeck, setTempDeck] = React.useState<CardProps[]>(deck.slice(0, 4))
-
 	const [indexInMainDeck, setIndexInDeck] = React.useState<number>(4)
 
 	function returnHandleClick() {
