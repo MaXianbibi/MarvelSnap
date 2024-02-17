@@ -1,9 +1,5 @@
 TODO: 
-    - Trouver un moyen de faire du drag and drop pour les images
-    - Interagire les card avec le plateau
-        - creer une liste de 4 cartes pour chauqe plateau
-    - creer les villes et avoir un moyen de les interagire avec les cartes ou le deck
-    - faire un simple ia
-    - faire le magasin
-    - faire un systeme de progression
-    - faire les finissions visuel du jeu
+    - etablire un systeme de combat
+    - capaciter special pour les carte
+    - meilleur visuel card
+    - bot ? mouvement aleatoire
